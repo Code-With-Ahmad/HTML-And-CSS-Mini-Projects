@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffe4d7;
+  display: grid;
+  place-items: center;
+}
+.main-container {
+  width: 500px;
+  aspect-ratio: 1;
+  background-color: #ffc46f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation-name: night;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.sun {
+  background-color: #e35e40;
+  width: 200px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.sun::after {
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  animation-name: eclipse;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+
+  animation-direction: alternate-reverse;
+}
+@keyframes eclipse {
+  0% {
+    transform: translate(100%);
+    scale: 1;
+    -webkit-transform: translate(100%);
+    -moz-transform: translate(100%);
+    -ms-transform: translate(100%);
+    -o-transform: translate(100%);
+  }
+  50% {
+    transform: translate(0%);
+    scale: 0.9;
+    -webkit-transform: translate(0%);
+    -moz-transform: translate(0%);
+    -ms-transform: translate(0%);
+    -o-transform: translate(0%);
+  }
+  100% {
+    transform: translate(-100%);
+    scale: 1;
+    -webkit-transform: translate(-100%);
+    -moz-transform: translate(-100%);
+    -ms-transform: translate(-100%);
+    -o-transform: translate(-100%);
+  }
+}
+@keyframes night {
+  25% {
+    background-color: #c09351;
+  }
+  25% {
+    background-color: #febe4c;
+  }
+  50% {
+    background-color: black;
+  }
+  75% {
+    background-color: #dea941;
+  }
+  100% {
+    background-color: #f4b943;
+  }
+}

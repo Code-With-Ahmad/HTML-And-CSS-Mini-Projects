@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #1b1827;
+  display: grid;
+  place-items: center;
+}
+.button {
+  border: 0.7rem solid #8a65fa;
+  background-color: transparent;
+  color: #8a65fa;
+  font-size: 5rem;
+  padding: 2rem 7rem;
+}
+.button:hover {
+  color: red;
+  border: 0.7rem solid red;
+  animation-name: shake;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+  0% {
+    rotate: 20deg;
+  }
+  50% {
+    rotate: -20deg;
+  }
+  100% {
+    rotate: 20deg;
+  }
+}

@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  height: 500px;
+  width: 1000px;
+  background-image: url("../Images/5.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  animation-name: carousel;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes carousel {
+  0% {
+    background-image: url("../Images/5.jpg");
+  }
+  20% {
+    background-image: url("../Images/1.jpg");
+  }
+  40% {
+    background-image: url("../Images/2.jpg");
+  }
+  60% {
+    background-image: url("../Images/3.jpg");
+  }
+  80% {
+    background-image: url("../Images/4.jpg");
+  }
+  100% {
+    background-image: url("../Images/5.jpg");
+  }
+}

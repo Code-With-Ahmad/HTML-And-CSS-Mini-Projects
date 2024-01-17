@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: grey;
+  display: grid;
+  place-items: center;
+}
+h1 {
+  font-size: 40px;
+  font-family: cursive;
+}
+.cradle {
+  width: 50rem;
+  background-color: transparent;
+  height: 50rem;
+  border-top: 2rem solid purple;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.cradle div {
+  height: 20rem;
+  width: 0.5rem;
+  background-color: purple;
+  position: relative;
+}
+.cradle div::after {
+  content: "";
+  position: absolute;
+  top: 97%;
+  left: -16px;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: purple;
+}
+.cradle div:first-child {
+  animation-name: left-cradle;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  transform-origin: top left;
+  animation-timing-function: linear;
+}
+.cradle div:last-child {
+  animation-name: right-cradle;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  transform-origin: top left;
+  animation-timing-function: linear;
+}
+@keyframes left-cradle {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 30deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
+@keyframes right-cradle {
+  0% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: -30deg;
+  }
+  50% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 0deg;
+  }
+}
